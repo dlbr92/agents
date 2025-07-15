@@ -12,19 +12,24 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 os.makedirs('output', exist_ok=True)
 
 requirements = """
-A simple account management system for a trading simulation platform.
-The system should allow users to create an account, deposit funds, and withdraw funds.
-The system should allow users to record that they have bought or sold shares, providing a quantity.
-The system should calculate the total value of the user's portfolio, and the profit or loss from the initial deposit.
-The system should be able to report the holdings of the user at any point in time.
-The system should be able to report the profit or loss of the user at any point in time.
-The system should be able to list the transactions that the user has made over time.
-The system should prevent the user from withdrawing funds that would leave them with a negative balance, or
- from buying more shares than they can afford, or selling shares that they don't have.
- The system has access to a function get_share_price(symbol) which returns the current price of a share, and includes a test implementation that returns fixed prices for AAPL, TSLA, GOOGL.
+Build a Python module that implements a simple to-do list manager.
+The class should allow adding a task (with a description and optional due date), marking a task as completed, listing all tasks, and deleting a task by its ID.
+Tasks should be kept in memory (no database needed).
+Each task has:
+An auto-incrementing integer ID
+A description (string)
+An optional due date (string or None)
+A boolean completed status (default: False)
+
+The API of the class should expose at least these methods:
+add_task(description: str, due_date: Optional[str] = None) -> int — adds a task, returns its ID.
+complete_task(task_id: int) -> bool — marks task completed, returns True if successful.
+list_tasks() -> List[Dict] — returns a list of all tasks as dicts.
+delete_task(task_id: int) -> bool — deletes the task, returns True if successful.
+Make sure the class can handle invalid task IDs gracefully.
 """
-module_name = "accounts.py"
-class_name = "Account"
+module_name = "todo_list.py"
+class_name = "TodoList"
 
 
 def run():

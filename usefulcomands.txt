@@ -1,3 +1,4 @@
 crewai create crew my project
 uv tool install crewai
 crewai run
+uv add something
