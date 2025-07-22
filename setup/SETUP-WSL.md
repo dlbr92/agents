@@ -53,3 +53,7 @@ At this point, I experienced an unpleasant memory error. I believe it's related 
 You'll need to create a new ".env" file in the agents folder, and copy across your .env from your other project. And you'll need to click "Select Kernel" and "Choose python environment..".
 
 Enjoy MCP!
+
+Adition:
+to acess ubuntu: wsl -d Ubuntu
+directory; mnt/c/Users/dlbr/projects/agents

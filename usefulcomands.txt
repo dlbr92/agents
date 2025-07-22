@@ -2,3 +2,4 @@ crewai create crew my project
 uv tool install crewai
 crewai run
 uv add something
+uv pip compile pyproject.toml -o requirements.txt
